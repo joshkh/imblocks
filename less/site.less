@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.imblocks-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    font-family: 'Open Sans', sans-serif;
+    .block {
+        display: flex;
+        flex: 0 1;
+        color: white;
+        background-color: #3498db;
+        padding: 30px;
+        &.empty {
+            flex: 1;
+            background-color: #2980b9;
+        }
+    }
+}
