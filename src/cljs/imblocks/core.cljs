@@ -18,5 +18,6 @@
 
 (defn ^:export init []
   (re-frame/dispatch-sync [::events/initialize-db])
+  (re-frame/dispatch [:imblocks.events.im/fetch-model {:root "http://beta.flymine.org/beta"}])
   (dev-setup)
   (mount-root))

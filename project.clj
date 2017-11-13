@@ -9,7 +9,8 @@
                  [compojure "1.6.0"]
                  [yogthos/config "0.9"]
                  [ring "1.6.3"]
-                 [intermine/imcljs "0.1.36"]]
+                 [intermine/imcljs "0.1.36"]
+                 [cljs-http "0.1.44"]]
 
   :plugins [[lein-cljsbuild "1.1.5"]
             [lein-garden "0.2.8"]
