@@ -3,6 +3,7 @@
 /*-init.clj
 /resources/public/js/compiled
 /resources/public/css
+/resources/public/vendor
 .idea/
 .lein-failures
 *.iml
