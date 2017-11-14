@@ -7,4 +7,4 @@
            :select ["Gene.organism.name"
                     "Gene.diseases.name"
                     "Gene.diseases.publications.title"
-                    "Gene.homologes.homologue.symbol"]}})
+                    "Gene.homologues.homologue.symbol"]}})

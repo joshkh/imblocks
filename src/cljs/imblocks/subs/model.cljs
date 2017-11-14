@@ -1,5 +1,6 @@
 (ns imblocks.subs.model
-  (:require [re-frame.core :refer [reg-sub]]))
+  (:require [re-frame.core :refer [reg-sub]]
+            [imcljs.path :as path]))
 
 (reg-sub ::model
          (fn [db]
@@ -9,4 +10,10 @@
          :<- [::model]
          (fn [model]
            (:classes model)))
+
+(reg-sub ::collections
+         :<- [::model]
+         (fn [model [_ path]]
+           (sort-by :displayName (path/relationships model path))))
+
 

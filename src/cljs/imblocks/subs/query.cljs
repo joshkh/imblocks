@@ -26,9 +26,9 @@
                      class-views (distinct (keep (partial path/trim-to-last-class model) views))
                      split-views (map #(s/split % #"\.") class-views)
                      max-columns (apply max (map count split-views))]
-                 (remove empty? (reduce (fn [total columns]
-                                          (conj total (dissoc (group-by (comp (partial s/join ".") (partial safe-take columns)) split-views) "")))
-                                        [] (range 0 (inc max-columns))))))
+                 (map keys(remove empty? (reduce (fn [total columns]
+                                           (conj total (dissoc (group-by (comp (partial s/join ".") (partial safe-take columns)) split-views) "")))
+                                         [] (range 0 (inc max-columns)))))))
 
 
 
