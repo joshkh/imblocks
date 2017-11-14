@@ -17,9 +17,10 @@
 
 (defn main []
   (let [  query (subscribe [:imblocks.subs.query/query])
-        classes (subscribe [:imblocks.subs.model/classes])]
+        classes (subscribe [:imblocks.subs.model/classes])
+        query-tree (subscribe [:imblocks.subs.query/query-tree])]
     (fn []
-      (js/console.log "query" @query)
+      (js/console.log "query-tree" @query-tree)
       [:div.imblocks-container
        [block (first @query)]
        [:div.block.empty "?Block"]])))

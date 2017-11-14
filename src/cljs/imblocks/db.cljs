@@ -6,4 +6,5 @@
    :query {:from "Gene"
            :select ["Gene.organism.name"
                     "Gene.diseases.name"
-                    "Gene.diseases.publications.title"]}})
+                    "Gene.diseases.publications.title"
+                    "Gene.homologes.homologue.symbol"]}})
