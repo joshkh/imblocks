@@ -14,6 +14,5 @@
 (reg-sub ::collections
          :<- [::model]
          (fn [model [_ path]]
-           (sort-by :displayName (path/relationships model path))))
-
+           (when model (sort-by :displayName (path/relationships model path)))))
 
